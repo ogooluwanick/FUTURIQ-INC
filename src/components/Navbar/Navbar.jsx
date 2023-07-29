@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {motion} from "framer-motion"
-import {HiX} from "react-icons/hi"
 
 import "./Navbar.scss"
 
@@ -37,50 +36,43 @@ const Navbar = () => {
         
 
   return (
-    <nav className={`${"navbar_container"}  ${scrollPos >= 5  && "blur_navbar"   }  `}>
-        <div className='app__navbar-logo'>
-                <a href="#home">
-                        <img src={"/logo.png"}  alt="logo" />
-                </a>
-        </div>
+    <nav className={`${"app__navbar"}  ${scrollPos >= 5  && "blur_navbar"   }  `}>
+        <div className="navbar_content">
 
-        <div className='app__navbar-menu'>
-        {
-                screen<500 ?
-                <>
-                        <span id="menu-btn" class={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
-                                <span class="hamburger-1"></span>
-                                <span class="hamburger-2"></span>
-                                <span class="hamburger-3"></span>
-                        </span>
+                <div className='app__navbar-logo'>
+                        <a href="#home">
+                                <img src={"/logo.png"}  alt="logo" />
+                        </a>
+                </div>
 
-                        {
-                        toggle && (
-                        <motion.div  whileInView={{opacity:[0,1]}}  transition={{duration:.5, type:"easeOut"}} >
-                                <HiX onClick={()=>setToggle(false)}/>
-                                
-                                <ul>
+                <div className='app__navbar-menu'>
+                {
+                        screen<500 ?
+                        <>
+                                <span id="menu-btn" class={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
+                                        <span class="hamburger-1"></span>
+                                        <span class="hamburger-2"></span>
+                                        <span class="hamburger-3"></span>
+                                </span>
+
                                 {
-                                ["home","about","work","skills","testimonials","contact" ].map((item)=>(
-                                        <li  className='' key={item}>
-                                        <a href={`#${item}`} onClick={()=>setToggle(false)}> {item} </a>
-                                        </li>
-                                ))
+                                toggle && (
+                                        <motion.div  whileInView={{opacity:[0,1]}}  transition={{duration:.5, type:"easeOut"}} >
+                                                <button>Our services</button>
+                                                <button>Join our newsletter</button>
+                                        </motion.div>
+                                )
                                 }
-                                </ul>
-                        </motion.div>
-                        )
-                        }
-                        
-                </>
-                :
-                <>
-                        <button>Our services</button>
-                        <button>Join our newsletter</button>
-                </>
-        }
+                                
+                        </>
+                        :
+                        <div className='menu_btns'>
+                                <a href="#services"><button>Our services</button></a>
+                                <button onClick={""} className='join'>Join our newsletter</button>
+                        </div>
+                }
+                </div>
         </div>
-
     </nav>
   )
 }
