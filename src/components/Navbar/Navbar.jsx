@@ -49,10 +49,10 @@ const Navbar = () => {
                 {
                         screen<600 ?
                         <>
-                                <span id="menu-btn" class={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
-                                        <span class="hamburger-1"></span>
-                                        <span class="hamburger-2"></span>
-                                        <span class="hamburger-3"></span>
+                                <span id="menu-btn" className={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
+                                        <span className="hamburger-1"></span>
+                                        <span className="hamburger-2"></span>
+                                        <span className="hamburger-3"></span>
                                 </span>
 
                                 {
