@@ -47,7 +47,7 @@ const Navbar = () => {
 
                 <div className='app__navbar-menu'>
                 {
-                        screen<500 ?
+                        screen<600 ?
                         <>
                                 <span id="menu-btn" class={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
                                         <span class="hamburger-1"></span>
