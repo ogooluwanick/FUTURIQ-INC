@@ -1,5 +1,22 @@
+@import url('//fonts.googleapis.com/css?family=Bungee+Shade');
+
+$bg: #2980b9;
+$color: #2c3e50;
+$mt: 100px;
+$fs: 25px;
+$fs2: 1.5rem;
+$fs3: 1em;
+$res: 850px;
+$res2: 550px;
+
 #about{
         position: relative;
+        background: url(../../../public/bg-tablet-pattern.svg);
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 100% 150%;
+        background-color: #fff;
+       
 }
 
 .app__about{
@@ -9,5 +26,36 @@
         flex-direction: column;
 
         font-family: "Inter","DM Sans", sans-serif;
+
+        
+
+        h2{
+                font-family: 'Bungee Shade'; 
+
+                color: var(--primary-color);
+                margin-bottom: 1.3rem;
+
+                font-size: $fs;
+                text-align: center;
+
+                @media screen and (max-width: $res){
+                        font-size: $fs2
+                }
+              
+        }
+
+        p{
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 1.25rem;
+                line-height: 33px;
+                text-align: center;
+                max-width: 790px;
+                color: #4d5761;
+
+                @media (max-width: 768px){
+                        font-size: 1rem;
+                }
+        }
+
  
 } 
