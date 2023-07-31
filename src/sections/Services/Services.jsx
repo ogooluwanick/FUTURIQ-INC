@@ -77,7 +77,7 @@ const Services = () => {
                         }
                         </section>
                         :
-                        <Carousel className="" infiniteLoop={true} showStatus={false} >
+                        <Carousel className="" autoPlay={true}  infiniteLoop={true} showStatus={false} >
                         {
                                 services.map((service, index) => {
                                         return (
