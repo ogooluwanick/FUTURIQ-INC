@@ -13,6 +13,10 @@
     
 //        padding: 4.5rem 2rem 0;
 
+        .app__hero-info{
+                z-index: 1;
+        }
+
 
         .hero_head{
                 font-family: 'Space Grotesk', sans-serif;
@@ -147,4 +151,27 @@
           text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
         }
         4%, 100% {  text-shadow: none; transform: none; }
+}
+
+
+.sub_canva{
+        position: absolute;
+        z-index: 0;
+        height: 100dvh;
+        width: 100dvw;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;        
+        align-items: center;
+
+        h1{
+
+                font-size: 5rem;
+                transform: rotate(-45deg);
+                background-color: pink;
+        }
+
+
 }
