@@ -2,7 +2,8 @@ import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import Aboutus from './sections/Aboutus/Aboutus';
 import Hero from './sections/Hero/Hero';
-import MissionStatement from './sections/MissionStatement/MissionStatement';
+import Mission from './sections/Mission/Mission';
+import Services from './sections/Services/Services';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
                 <Navbar/>   
                 <Hero/>  
                 <Aboutus/>               
-                <MissionStatement/>               
+                <Mission/>               
+                <Services/>               
         </div>
   );
 }

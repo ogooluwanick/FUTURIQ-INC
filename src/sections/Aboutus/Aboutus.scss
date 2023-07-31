@@ -29,20 +29,7 @@ $res2: 550px;
 
         
 
-        h2{
-                font-family: 'Bungee Shade'; 
-
-                color: var(--primary-color);
-                margin-bottom: 1.3rem;
-
-                font-size: $fs;
-                text-align: center;
-
-                @media screen and (max-width: $res){
-                        font-size: $fs2
-                }
-              
-        }
+        h2{margin-bottom: 1.3rem;}
 
         p{
                 font-family: 'Space Grotesk', sans-serif;

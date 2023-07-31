@@ -1,0 +1,118 @@
+#services{
+        position: relative;
+}
+
+.app__services{
+        flex: 1; 
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+
+        font-family: 'Space Grotesk', sans-serif;
+
+        .serve-holder{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                gap: 40px;
+                width: 100%;
+        }
+}
+
+
+.serve-card{
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        flex: 1;
+        height: 100%;
+
+        cursor: pointer;
+        text-align: center;
+        padding: 2rem 1rem;
+        border: 1px solid #d2d6db;
+        border-radius: 16px;
+        box-shadow: 0 4px 8px -2px rgba(0,0,0,.1), 0 1px 4px -2px rgba(0,0,0,.06);
+
+        h4{
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+                transition: all .35s ease-in-out;
+
+
+                position: relative;
+                z-index: 1;
+
+
+        }
+
+        .caption{
+                position: relative;
+                z-index: 1;
+
+                color: #4d5761;
+                font-family: Inter;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                transition: all .35s ease-in-out;
+
+
+        }
+
+        .deco{
+                position: absolute;
+                top: -30px;
+                right: -25px;
+                display: block;
+                background-color: #f9b234; 
+                border-radius: 50%;
+                width: 5rem;
+                height: 5rem;
+                aspect-ratio: 1/1;
+                transition: all .35s ease-in-out;
+                z-index: 0;
+
+                
+        }
+
+        &:nth-of-type(2){
+
+
+                .deco{
+                        background-color: var(--primary-color); 
+                }
+
+        }
+
+        &:hover{
+                .deco{
+                        transform: scale(20);
+                }
+
+                &:nth-of-type(2){
+                        .caption{
+                                color: var(--white-color);
+                        }
+                }
+        }
+
+}
+
+.carousel-root{
+        width: 100vw;
+        padding: 0 1rem;
+}
+
+
+
+
+
+
+

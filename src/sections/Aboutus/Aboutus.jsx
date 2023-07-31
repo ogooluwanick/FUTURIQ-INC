@@ -8,7 +8,7 @@ import MotionWrap from "../../wrapper/MotionWrap"
 const Aboutus = () => {
   return (
         <> 
-                <h2>About us</h2>
+                <h2 className='subheader'>About us</h2>
                 <p>
                         Welcome to Futuriq Inc., where revolutionary AI solutions come to fruition, guiding startups, small businesses and enterprises into AI-driven powerhouses. Led by visionary founder Edwina McKennon, our expert team is passionately committed to enhancing your business's efficiency and fueling its growth with cutting-edge AI products.
                         At Futuriq Inc., we transform your ideas into deployable solutions, harnessing our extensive industry experience to redefine your company's success. Empowering your organization across multiple sectors, we pave the way for innovative solutions that captivate the market.

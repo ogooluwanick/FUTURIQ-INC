@@ -41,7 +41,7 @@
                 font-weight: 700;
                 
                 font-size: 40px;
-                line-height: 40px;
+                line-height: 45px;
                 text-align: center;
 
 
@@ -49,6 +49,13 @@
                         display: block;
                         -webkit-text-fill-color: var(--primary-color);
                         color: var(--primary-color);
+                        transition: all .25s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover{
+                                transform: rotate(5deg) skewX(13deg) ;
+
+                        }
                 }
 
                 @media (max-width: 768px){
