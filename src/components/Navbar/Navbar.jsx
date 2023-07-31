@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import {motion} from "framer-motion"
+import {AnimatePresence, motion} from "framer-motion"
+import useOnclickOutside from 'react-cool-onclickoutside'
 
 import "./Navbar.scss"
 
 
 const Navbar = () => {
+        const submenu = useOnclickOutside( ()=> setToggle(false) )
+
+
 
         const [scrollPos, setScrollPos] = useState(0);
         const [screen, setScreen] = useState(0)
@@ -49,20 +53,26 @@ const Navbar = () => {
                 {
                         screen<600 ?
                         <>
-                                <span id="menu-btn" className={`block  hamburger ${toggle&&"open"}`}  onClick={()=>setToggle(val=>!val)}>
+                                <span id="menu-btn" className={`block  hamburger ${toggle&&"open"}`}  onClick={()=>  setToggle(val=>!val)}>
                                         <span className="hamburger-1"></span>
                                         <span className="hamburger-2"></span>
                                         <span className="hamburger-3"></span>
                                 </span>
 
+                                <AnimatePresence mode='wait' >
                                 {
                                 toggle && (
-                                        <motion.div  whileInView={{opacity:[0,1]}}  transition={{duration:.5, type:"easeOut"}} >
-                                                <button>Our services</button>
-                                                <button>Join our newsletter</button>
+                                        <motion.div  className='md_submenu' initial={{ y: "100%", opacity:0 }}   animate={{y: 0, opacity:1 }}   exit={{y: "100%", opacity:0 }}     transition={{ type: "spring", bounce: 0.3, duration: 0.4 }} ref={submenu} >
+                                                <div>
+                                                        <a href="#services" onClick={()=>setToggle(false)}>
+                                                                <button>Our services</button>
+                                                        </a>
+                                                        <button onClick={()=>setToggle(false)}>Join our newsletter</button>
+                                                </div>
                                         </motion.div>
                                 )
                                 }
+                                </AnimatePresence>
                                 
                         </>
                         :
