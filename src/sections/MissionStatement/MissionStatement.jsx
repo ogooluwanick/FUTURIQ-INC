@@ -1,17 +1,18 @@
 import React from 'react'
 
+import "./MissionStatement.scss"
 import AppWrap from '../../wrapper/AppWrap'
 import MotionWrap from '../../wrapper/MotionWrap'
 
 const MissionStatement = () => {
   return (
         <>
-                <p>
-                        <span>Unleash</span> your company's true potential 
-                        with Futuriq's unmatched AI development expertise. <span>Unleash</span>
+                <div className="btn-shine">
+                        Unleash your company's true potential 
+                        with Futuriq's unmatched <span>AI development</span> expertise. 
                         Accelerate your growth and stay ahead of the competition, 
-                        <span>Unleash</span>harnessing the power of cutting-edge AI solutions tailored to your unique business needs.
-                </p>
+                        harnessing the power of <span>cutting-edge AI solutions </span>tailored to your unique business needs.
+                </div>
         </>
   )
 }

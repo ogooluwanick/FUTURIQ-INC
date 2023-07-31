@@ -1,0 +1,65 @@
+#mission{
+        position: relative;
+}
+
+.app__mission{
+        flex: 1; 
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+
+        font-family: 'Space Grotesk', sans-serif;
+
+        .btn-shine{
+                
+
+
+
+                color: #ffffff;
+                background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+                background-position: 0;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: shine 40s infinite linear;
+                animation-fill-mode: forwards;
+                -webkit-text-size-adjust: none;
+                font-weight: 600;
+                font-size: 16px;
+                text-decoration: none;
+                
+                @keyframes shine{
+                        0%{background-position: 0}
+                        
+                        100%{background-position: 6000px}
+                        
+                        
+                }
+
+                margin: auto;
+                width: 100%;
+                max-width: 790px;
+                font-weight: 700;
+                
+                font-size: 40px;
+                line-height: 40px;
+                text-align: center;
+
+
+                span{
+                        display: block;
+                        -webkit-text-fill-color: var(--primary-color);
+                        color: var(--primary-color);
+                }
+
+                @media (max-width: 768px){
+                        font-size: 30px;
+                        line-height: 35px;
+                }
+
+                @media (max-width: 406px){
+                        font-size: 25px;
+                        line-height: 30px;
+                
+                }
+        }
+}
