@@ -11,10 +11,6 @@
         font-family: 'Space Grotesk', sans-serif;
 
         .btn-shine{
-                
-
-
-
                 color: #ffffff;
                 background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
                 background-position: 0;
@@ -31,8 +27,6 @@
                         0%{background-position: 0}
                         
                         100%{background-position: 6000px}
-                        
-                        
                 }
 
                 margin: auto;
@@ -47,8 +41,8 @@
 
                 span{
                         display: block;
-                        -webkit-text-fill-color: var(--primary-color);
-                        color: var(--primary-color);
+                        -webkit-text-fill-color: var(--secondary-color);
+                        color: var(--secondary-color);
                         transition: all .25s ease-in-out;
                         cursor: pointer;
 
