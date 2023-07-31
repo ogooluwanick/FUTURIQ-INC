@@ -49,16 +49,16 @@
         }
 
         .subheader{
-                font-family: 'Bungee Shade'; 
+                font-family: 'Space Grotesk', sans-serif;
         
                 color: var(--primary-color);
                 margin-bottom: 1.3rem;
         
-                font-size: 25px;
+                font-size: 35px;
                 text-align: center;
         
                 @media screen and (max-width: 850px){
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                 }
         }
 
