@@ -1,6 +1,7 @@
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import Aboutus from './sections/Aboutus/Aboutus';
+import Contact from './sections/Contact/Contact';
 import Hero from './sections/Hero/Hero';
 import Mission from './sections/Mission/Mission';
 import Services from './sections/Services/Services';
@@ -14,7 +15,8 @@ function App() {
                 <Aboutus/>               
                 <Mission/>               
                 <Services/>          
-                <Team/>     
+                <Team/>    
+                <Contact/> 
         </div>
   );
 }

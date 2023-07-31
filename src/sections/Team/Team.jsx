@@ -8,6 +8,7 @@ const Team = () => {
   return (
         <>
                 <h2 className='subheader'>MEET THE TEAM</h2>
+                
 
         </>
   )
