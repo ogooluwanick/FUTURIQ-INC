@@ -7,6 +7,8 @@ import Contact from './sections/Contact/Contact';
 import Hero from './sections/Hero/Hero';
 import Mission from './sections/Mission/Mission';
 import Services from './sections/Services/Services';
+import Team from './sections/Team/Team';
+import Footer from './sections/Footer/Footer';
 
 function App() {
   return (
@@ -18,8 +20,9 @@ function App() {
                 <Aboutus/>               
                 <Mission/>               
                 <Services/>          
-                {/* <Team/>     */}
+                <Team/>    
                 <Contact/> 
+                <Footer/> 
         </div>
 
   );

@@ -22,10 +22,9 @@ const Contact = () => {
                 // try {
                         toast.success( "Message sent",{ duration: 1500 })
                         Fireworks();
-                        
                 // } 
                 // catch (error) {
-                        toast.error( "Message failed",{ duration: 1500 })
+                        // toast.error( "Message failed",{ duration: 1500 })
                         
                 // }
                 setLoading(false)
