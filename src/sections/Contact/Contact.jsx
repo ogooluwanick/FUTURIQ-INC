@@ -6,9 +6,11 @@ import "./Contact.scss"
 import MotionWrap from '../../wrapper/MotionWrap'
 import AppWrap from '../../wrapper/AppWrap'
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
+import {Fireworks} from '../../lib/Fireworks';
+
 
 const Contact = () => {
-        const { register, handleSubmit , formState:{errors} ,setValue,getValues,setFocus} = useForm();
+        const { register, handleSubmit , formState:{errors} ,setValue,getValues} = useForm();
 
         const [loading, setLoading] = useState(false)
 
@@ -23,6 +25,7 @@ const Contact = () => {
                         
                 // }
                 setLoading(false)
+                Fireworks();
 
         }
 
