@@ -1,3 +1,5 @@
+import { Toaster } from 'react-hot-toast';
+
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import Aboutus from './sections/Aboutus/Aboutus';
@@ -8,7 +10,9 @@ import Services from './sections/Services/Services';
 
 function App() {
   return (
-        <div className="app">
+          <div className="app">
+                <Toaster position="top-center" reverseOrder={false} />
+
                 <Navbar/>   
                 <Hero/>  
                 <Aboutus/>               
@@ -17,6 +21,7 @@ function App() {
                 {/* <Team/>     */}
                 <Contact/> 
         </div>
+
   );
 }
 

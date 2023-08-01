@@ -7,10 +7,11 @@ import MotionWrap from '../../wrapper/MotionWrap'
 import AppWrap from '../../wrapper/AppWrap'
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import {Fireworks} from '../../lib/Fireworks';
+import { toast } from 'react-hot-toast';
 
 
 const Contact = () => {
-        const { register, handleSubmit , formState:{errors} ,setValue,getValues} = useForm();
+        const { register, handleSubmit , formState:{errors} ,setValue} = useForm();
 
         const [loading, setLoading] = useState(false)
 
@@ -19,13 +20,21 @@ const Contact = () => {
                 console.log(name,subject,email, content,  budget)
                 setLoading(true)
                 // try {
+                        toast.success( "Message sent",{ duration: 1500 })
+                        Fireworks();
                         
                 // } 
                 // catch (error) {
+                        toast.error( "Message failed",{ duration: 1500 })
                         
                 // }
                 setLoading(false)
-                Fireworks();
+
+                setValue("name","")
+                setValue("subject","")
+                setValue("email","")
+                setValue("content","")
+                setValue("budget","")
 
         }
 
