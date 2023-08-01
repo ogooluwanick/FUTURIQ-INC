@@ -5,27 +5,36 @@ import { useForm } from "react-hook-form";
 import "./Contact.scss"
 import MotionWrap from '../../wrapper/MotionWrap'
 import AppWrap from '../../wrapper/AppWrap'
+import LoadingBox from '../../components/LoadingBox/LoadingBox';
 
 const Contact = () => {
         const { register, handleSubmit , formState:{errors} ,setValue,getValues,setFocus} = useForm();
 
         const [loading, setLoading] = useState(false)
 
-        const handleEmail =()=>{
-                try {
+
+        const handleEmail =({name,subject,email, content,  budget})=>{
+                console.log(name,subject,email, content,  budget)
+                setLoading(true)
+                // try {
                         
-                } 
-                catch (error) {
+                // } 
+                // catch (error) {
                         
-                }
+                // }
+                setLoading(false)
+
         }
+
+        console.log(loading)
+
   return (
         <>
                 <h2 className='subheader'>LET'S GET IN TOUCH</h2>
 
                 <form onSubmit={handleSubmit(handleEmail)}>
                         <div className="input-box">
-                                <input id='name'  name='name' type="text" placeholder='Full name' style={{textTransform:"capitalize"}}  {
+                                <input id='name'  name='name' type="text" placeholder='Full name' disabled={loading} style={{textTransform:"capitalize"}}  {
                                                                                                 ...register(      "name",
                                                                                                                         {
                                                                                                                                 pattern:{value: /^(\s*[a-zA-Z-]+\s*)+$/g , message:"Just your first and last name, thanks. 😂"},
@@ -37,7 +46,7 @@ const Contact = () => {
                         </div>
                         <div className="doublebag">
                                 <div className="input-box">
-                                        <input name="subject" id='subject' type="text"  placeholder='Subject' {
+                                        <input name="subject" id='subject' type="text" disabled={loading}  placeholder='Subject' {
                                                                                                 ...register(      "subject",
                                                                                                                         {
                                                                                                                                 required:"Please include a subject 🥺",
@@ -48,7 +57,7 @@ const Contact = () => {
 
                                 </div>
                                 <div className="input-box">
-                                        <input name="email" id='email' type="email" placeholder='Your email'  autoFocus {
+                                        <input name="email" id='email' type="email" disabled={loading} placeholder='Your email'  autoFocus {
                                                                                                 ...register(      "email",
                                                                                                                         {
                                                                                                                                 required:"Lol! Don't forget to add your email. 😂",
@@ -60,10 +69,10 @@ const Contact = () => {
                                 </div>
                         </div>
                         <div className="input-box">
-                                <textarea name="content" id="content" type="text" placeholder='How can we help you?'  {
+                                <textarea name="content" id="content" type="text" disabled={loading} placeholder='How can we help you?'  {
                                                                                                 ...register(      "content",
                                                                                                                         {
-                                                                                                                                required:"Lol! Don't forget to add your email. 😂",
+                                                                                                                                required:"Lol! Don't forget about your message. 😂",
                                                                                                                         })
                                                                                         }
                                 />
@@ -71,14 +80,14 @@ const Contact = () => {
                         </div>
                         <div className="input-box">
                                 <label htmlFor="budget">What is you budget for this project</label>
-                                <select name="budget" id="budget" {
+                                <select name="budget" id="budget" disabled={loading} {
                                                                                                 ...register(      "budget",
                                                                                                                         {
                                                                                                                                 required:"Kindly let us know your budget. 😂",
                                                                                                                         })
                                                                                         }
                                 >
-                                        <option value="less than $5,000" selected>less than $5,000</option>
+                                        <option value="less than $5,000" defaultValue>less than $5,000</option>
                                         <option value="$5,000 - $10,000">$5,000 - $10,000</option>
                                         <option value="$20,000 - $40,000" >$20,000 - $40,000</option>
                                         <option value="$40,000+">$40,000+</option>
@@ -88,8 +97,8 @@ const Contact = () => {
                         </div>
 
                         <div className="btn-box">
-                                <button type='submit'>
-                                        Send
+                                <button type='submit' disabled={loading} >
+                                        { loading ?  <LoadingBox size={10} text={""} color="#fff" />   : "Send"}
                                 </button>
                         </div>
                 </form>

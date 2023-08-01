@@ -1,0 +1,31 @@
+
+
+.box{
+        display: flex ;
+        flex-direction: row ;
+        justify-content: center ;
+        align-items:center ;
+        gap: .5rem;
+
+        user-select: none;
+    
+        span{
+                color: #324d67;
+                // font-size: 3rem;
+        }
+}
+    
+  
+    
+    
+.dim{
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+        /* will-change: transform; */
+        transition: all 1s ease-in-out;
+}
