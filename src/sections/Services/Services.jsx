@@ -5,6 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import "./Services.scss"
 import MotionWrap from '../../wrapper/MotionWrap'
 import AppWrap from '../../wrapper/AppWrap'
+import Veba from '../../components/Veba'
+
 
 
 
@@ -61,7 +63,7 @@ const Services = () => {
         <>
                 <h2 className='subheader'>OUR SERVICES</h2>
 
-                <h1 style={{padding:"2rem"}}>3D deco goes here</h1>
+                <Veba/>
 
                 {
                         screen>770 ?

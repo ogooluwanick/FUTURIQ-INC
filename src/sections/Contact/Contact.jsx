@@ -69,7 +69,7 @@ const Contact = () => {
 
                                 </div>
                                 <div className="input-box">
-                                        <input name="email" id='email' type="email" disabled={loading} placeholder='Your email'  autoFocus {
+                                        <input name="email" id='email' type="email" disabled={loading} placeholder='Your email'   {
                                                                                                 ...register(      "email",
                                                                                                                         {
                                                                                                                                 required:"Lol! Don't forget to add your email. 😂",
