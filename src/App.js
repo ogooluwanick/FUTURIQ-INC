@@ -5,7 +5,6 @@ import Contact from './sections/Contact/Contact';
 import Hero from './sections/Hero/Hero';
 import Mission from './sections/Mission/Mission';
 import Services from './sections/Services/Services';
-import Team from './sections/Team/Team';
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
                 <Aboutus/>               
                 <Mission/>               
                 <Services/>          
-                <Team/>    
+                {/* <Team/>     */}
                 <Contact/> 
         </div>
   );
