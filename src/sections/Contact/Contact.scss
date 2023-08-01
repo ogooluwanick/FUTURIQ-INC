@@ -19,14 +19,83 @@
                 width: 50%;
 
                 min-width: 270px;
+                color: #9ca3af;
 
                 .input-box{
                         display: flex;
 
                         margin: 20px 0  ;
+                        flex-direction: column;
 
-                        input, textarea{
+                        input, textarea, select{
+                                // flex: 1;
+
+                                padding: 4px 0;
+                                line-height: 1.25;
+                                font-size: 1.125rem;
+                                border: none;
+                                border-bottom: 1px #9ca3af solid;
+                                color: #9ca3af;
+                                font-family: "Inter","DM Sans", sans-serif;
+
+                                &::placeholder{
+                                        color: #9ca3af;
+                                        font-family: "Inter","DM Sans", sans-serif;
+                                }
+
+                                &:hover, &:focus{
+                                        outline: none;
+                                }
+
+                                @media screen and (max-width:768px) {
+                                        font-size: 1rem;
+                                        line-height: 1.5rem;
+                                }
+                        }
+
+                        textarea{
+                                resize: vertical;
+                                min-height: 120px;
+                                max-height: 400px;
+                        }
+
+                        label{
+                                font-family: "Inter","DM Sans", sans-serif;
+                                margin-bottom: 0.5rem;
+                        }
+                }
+
+                .doublebag{
+                        display: flex;
+                        gap: 0 1.5rem ;
+
+                        .input-box{
                                 flex: 1;
+                        }
+
+                        @media screen and (max-width:900px) {
+                                flex-direction: column;
+                        }
+                }
+
+
+                .btn-box{
+                        display: grid;
+                        place-content: center;
+                        margin-top: 3rem;
+
+                        button{
+                                padding: 1rem 2.5rem;
+                                border-radius: 10px;
+
+                                font-weight: 500;
+                                font-size: 1.1rem;
+                                color: #fff;
+                                background-color: var(--primary-color);
+
+                                &:hover, &:focus{
+
+                                }
                         }
                 }
 

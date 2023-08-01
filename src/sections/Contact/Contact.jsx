@@ -48,7 +48,7 @@ const Contact = () => {
 
                                 </div>
                                 <div className="input-box">
-                                        <input name="email" id='email' type="email" placeholder='Your email' style={{textTransform:"lowercase"}} autoFocus {
+                                        <input name="email" id='email' type="email" placeholder='Your email'  autoFocus {
                                                                                                 ...register(      "email",
                                                                                                                         {
                                                                                                                                 required:"Lol! Don't forget to add your email. 😂",
@@ -60,7 +60,7 @@ const Contact = () => {
                                 </div>
                         </div>
                         <div className="input-box">
-                                <textarea name="content" id="content" type="text" placeholder='How can we help you?' cols="35" rows="10" {
+                                <textarea name="content" id="content" type="text" placeholder='How can we help you?'  {
                                                                                                 ...register(      "content",
                                                                                                                         {
                                                                                                                                 required:"Lol! Don't forget to add your email. 😂",
