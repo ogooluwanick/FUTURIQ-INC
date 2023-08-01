@@ -10,4 +10,31 @@
 
         font-family: 'Space Grotesk', sans-serif;
 
+        h2{
+                margin-bottom: 16px;
+        }
+
+
+        form{
+                width: 50%;
+
+                min-width: 270px;
+
+                .input-box{
+                        display: flex;
+
+                        margin: 20px 0  ;
+
+                        input, textarea{
+                                flex: 1;
+                        }
+                }
+
+        }
+
+        .errors{
+                color: #FF3333;
+                padding: 0.3rem 0;
+        }
+
 }
