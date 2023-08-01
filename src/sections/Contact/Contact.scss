@@ -93,8 +93,10 @@
                                 color: #fff;
                                 background-color: var(--primary-color);
 
-                                &:hover, &:focus{
+                                transition: all .3s ease-in-out;
 
+                                &:hover, &:focus{
+                                        transform: scale(1.1);
                                 }
                         }
                 }

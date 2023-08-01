@@ -6,7 +6,6 @@ const AppWrap = (Component,idName,classNames) => function HOC(){
 
         <div className='app__wrapper app__flex'> 
             <Component/>
-        
         </div>
         
     </div>
