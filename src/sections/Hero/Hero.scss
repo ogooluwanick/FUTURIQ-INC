@@ -182,6 +182,10 @@
 
 .veba_canva{
         width: 100dvw !important;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         overflow: hidden;
 }
