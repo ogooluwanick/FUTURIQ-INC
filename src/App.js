@@ -1,4 +1,5 @@
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/react';
 
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
@@ -14,6 +15,7 @@ function App() {
   return (
           <div className="app">
                 <Toaster position="top-center" reverseOrder={false} />
+                <Analytics />   
 
                 <Navbar/>   
                 <Hero/>  
